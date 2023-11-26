@@ -1,5 +1,9 @@
-import csv
+# Binary Serach in Python 
+# Taking a real-time scenario to find the Contact in a Contact List
 
+import csv #importing csv library to read .csv file
+
+# Creating a binary_search function to on contacts by name
 def binary_search(contacts, target_name):
     low, high = 0, len(contacts) - 1
 
@@ -16,6 +20,7 @@ def binary_search(contacts, target_name):
 
     return -1  # Contact not found
 
+#  Function to search for a contact in the phone book
 def phone_book_search(contacts, target_name):
     contacts.sort(key=lambda x: x["name"])  # Sort the contacts by name
 
@@ -42,6 +47,7 @@ def phone_book_search(contacts, target_name):
     else:
         print("Contact not found.")
 
+# Function to read contacts from a CSV file
 def read_contacts_from_csv(file_path):
     contacts = []
     with open(file_path, 'r') as file:
@@ -50,8 +56,7 @@ def read_contacts_from_csv(file_path):
             contacts.append({"name": row["First Name"], "surname":row["Last Name"] ,"phone": row["Phone Number"]})
     return contacts
 
-# Example usage:
-#file_path = (r'C:\Users\Ishan Gohil\Downloads\100-contacts.csv')  # Replace with the actual path to your CSV file
+# .csv file path that from where data will be searched
 file_path = (r'C:/Users/Ishan Gohil/OneDrive/Desktop/CPL_Project/contacts.csv')
 contacts_list = read_contacts_from_csv(file_path)
 

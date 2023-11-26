@@ -1,7 +1,9 @@
-// Import necessary modules for Node.js
-const readline = require('readline');
+// Binary Serach in JavaScript 
+// Taking a real-time scenario to find the Contact in a Contact List
+
+const readline = require('readline'); // importing readlines module to read the content of .csv file
 const fs = require('fs');
-const csv = require('csv-parser');
+const csv = require('csv-parser'); 
 
 // Create a readline interface for user input
 const rl = readline.createInterface({
@@ -76,9 +78,9 @@ function readContactsFromCSV(file_path, callback) {
         });
 }
 
-// Example usage:
-// Replace with the actual path to your CSV file
+//Giving the path of the .csv file from where the data will be fetched
 const file_path = 'C:/Users/Ishan Gohil/OneDrive/Desktop/CPL_Project/contacts.csv';
+
 // Read contacts from CSV file
 readContactsFromCSV(file_path, (contactsList) => {
     // Get user input for contact name
